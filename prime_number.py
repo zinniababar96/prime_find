@@ -1,11 +1,14 @@
-low=int(input("enter first : "))
-hih=int(input("enter last : "))
-for num in range(low,hih+1):
-    if num>1 :
-        for i in range(2,num):
-            if(num%i)==0 :
-                
-                break
-            else:
-                print(num)
-                break
+start = int (input("Enter the starting range:"))
+end = int (input("Enter the end range: "))
+
+print ("Prime numbers in the range", start, "to", end)
+
+for i in range(start, end+1):
+    flag = 0
+    for j in range(2, i):
+        if (i % j == 0):
+            flag = 1
+            break
+            
+    if (flag == 0):
+        print (i, end = ' ')
